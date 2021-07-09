@@ -17,7 +17,7 @@ export default function Home({ vaccinations }) {
 // This gets called on every request
 export async function getServerSideProps(context) {
   // Fetch data from external API
-  const res = await axios.get(`http://localhost:1337/vaccinations?_limit=8`)
+  const res = await axios.get(`${process.env.baseApiUrl}/vaccinations?_limit=8`)
   const vaccinations = await res.data
 
   // Pass data to the page via props

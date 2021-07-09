@@ -40,7 +40,7 @@ const Form = ({ vaccination }) => {
 
         axios({
           method: "post",
-          url: "http://localhost:1337/vaccinations",
+          url: `${process.env.baseApiUrl}/vaccinations`,
           data: formData
         })
           .then(({ data }) => {
@@ -67,7 +67,7 @@ const Form = ({ vaccination }) => {
 
         axios({
           method: "put",
-          url: `http://localhost:1337/vaccinations/${vaccination.id}`,
+          url: `${process.env.baseApiUrl}/vaccinations/${vaccination.id}`,
           data: formData
         })
           .then(({ data }) => {

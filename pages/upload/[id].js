@@ -20,7 +20,7 @@ export default function UploadUpdate({ vaccination }) {
 export async function getServerSideProps(context) {
     const { id } = context.params
     // Fetch data from external API
-    const res = await axios.get(`http://localhost:1337/vaccinations/${id}`)
+    const res = await axios.get(`${process.env.baseApiUrl}/vaccinations/${id}`)
     const vaccination = await res.data
     
     // Pass data to the page via props

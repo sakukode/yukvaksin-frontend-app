@@ -14,7 +14,7 @@ const Item = ({vaccination}) => {
         let confirmDelete = confirm("Are You sure want to delete this?");
 
         if(confirmDelete) {
-            axios.delete(`http://localhost:1337/vaccinations/${vaccination.id}`)
+            axios.delete(`${process.env.baseApiUrl}/vaccinations/${vaccination.id}`)
                 .then(function (response) {
                     console.log(response);
                     setTimeout(() => {
@@ -38,13 +38,8 @@ const Item = ({vaccination}) => {
     return (
         <div className={"md:p-8 p-2 bg-white " + (deleted ? "hidden" : "")}>
             {vaccination.photo ? (
-                <Image
-                    className="rounded-lg w-full"
-                    src={API_URL + vaccination.photo.url }
-                    width={400}
-                    height={400}
-                    alt={vaccination.city}
-                />
+              
+                <img className="rounded-lg w-full" src={process.env.baseApiUrl + vaccination.photo.url} />
             ) : (
                 <Image
                     className="rounded-lg w-full"
