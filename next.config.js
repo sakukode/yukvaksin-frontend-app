@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'via.placeholder.com'],
+    domains: ['147.182.142.111', 'via.placeholder.com'],
   },
   env: {
     baseApiUrl: 'http://localhost:1337',

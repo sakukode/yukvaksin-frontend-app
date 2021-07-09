@@ -1,5 +1,3 @@
-const API_URL = 'http://localhost:1337';
-
 import axios from 'axios';
 import { useState } from 'react';
 import { useRouter } from 'next/router'
