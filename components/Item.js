@@ -39,14 +39,20 @@ const Item = ({vaccination}) => {
         <div className={"md:p-8 p-2 bg-white " + (deleted ? "hidden" : "")}>
             {vaccination.photo ? (
               
-                <img className="rounded-lg w-full" src={process.env.baseApiUrl + vaccination.photo.url} />
+                <Image 
+                    className="rounded-lg w-full" 
+                    src={process.env.baseApiUrl + vaccination.photo.url} 
+                    width={400}
+                    height={400}
+                    alt={vaccination.city}
+                />
             ) : (
                 <Image
                     className="rounded-lg w-full"
                     src={`https://via.placeholder.com/400`}
                     width={400}
                     height={400}
-                    alt={vaccination.city}
+                    alt={`vaksinasi covid-19`}
                 />
             )}
             
