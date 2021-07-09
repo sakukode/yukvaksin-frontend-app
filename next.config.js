@@ -4,6 +4,6 @@ module.exports = {
     domains: ['147.182.142.111', 'via.placeholder.com'],
   },
   env: {
-    baseApiUrl: 'http://localhost:1337',
+    baseApiUrl: 'http://147.182.142.111:1337',
   },
 }
